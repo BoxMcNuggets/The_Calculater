@@ -1,0 +1,156 @@
+﻿<Window x:Class="The_Calculater.CalculatorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:The_Calculater"
+        mc:Ignorable="d"
+        Title="The Calculator" 
+        Height="250" 
+        Width="450">
+    <Grid
+        Margin="10"
+        Background="DarkGray">
+        <StackPanel>
+            <Label
+                x:Name="Label"
+                Content="The Calculator"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="Arial"
+                FontSize="20"
+                Foreground="Orange"
+                FontWeight="Bold"
+                />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="110"/>
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Content="Operand 1"
+                    Foreground="Orange"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Content="Operand 2"
+                    Foreground="Orange"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    />
+                <Button
+                    x:Name="Button_Calculate"
+                    Grid.Row="0"                    
+                    Grid.Column="2"
+                    Height="25"
+                    Width="75"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Content="Calculate"
+                    Background="LightGray"
+                    Foreground="Orange" 
+                    Click="Button_Calculate_Click"
+                    />
+                <!--<Button
+                    x:Name="Button_Help"
+                    Grid.Column="3"
+                    Grid.Row="2"
+                    Height="25"
+                    Width="50"
+                    Content="Help"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right" Click="Button_Help_Click" Margin="0,0,18,0"
+                />-->
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    Content="Total"
+                    Foreground="Orange"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    x:Name="textBox_Operand1"
+                    Width="75"
+                    Height="25"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    x:Name="textBox_Operand2"
+                    Width="75"
+                    Height="25"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    x:Name="Label_Total"
+                    Width="75"
+                    Height="25"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="White"
+                    />
+                <ComboBox
+                    x:Name="comboBox_Operation"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Height="30"
+                    Width="40"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    Margin="10" 
+                    SelectionChanged="ComboBox_Operation_SelectionChanged">
+                    <ComboBoxItem Content="+" IsSelected="True"/>
+                    <ComboBoxItem Content="-"/>
+                    <ComboBoxItem Content="*"/>
+                    <ComboBoxItem Content="/"/>
+                </ComboBox>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="65"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    x:Name="Button_Help"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Height="25"
+                    Width="50"
+                    Content="Help"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right" 
+                    Click="Button_Help_Click" Margin="0,0,-111,10"
+                    />
+                <Image
+                    Source="https://webcomicms.net/sites/default/files/clipart/159239/math-related-pictures-159239-1440472.gif"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center" 
+                    />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
