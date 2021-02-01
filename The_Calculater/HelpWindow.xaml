@@ -18,28 +18,23 @@
             FontWeight="Bold"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Center"
-            Foreground="Orange"
-            />
+            Foreground="Orange"/>
         <TextBlock
             Text="1) Put first number into operand 1"
             Margin="10"
-            TextWrapping="Wrap"
-            />
+            TextWrapping="Wrap"/>
         <TextBlock
             Text="2) Put second number into operand 2"
             Margin="10"
-            TextWrapping="Wrap"
-            />
+            TextWrapping="Wrap"/>
         <TextBlock
             Text="3) Select what operation you are trying to do"
             Margin="10"
-            TextWrapping="Wrap"
-            />
+            TextWrapping="Wrap"/>
         <TextBlock
             Text="4) Click on &quot;calculate&quot; to get your answer"
             Margin="10"
-            TextWrapping="Wrap"
-            />
+            TextWrapping="Wrap"/>
         <Button
             Content="Exit"
             Margin="20"
@@ -48,7 +43,6 @@
             FontSize="20"
             FontWeight="Bold"
             Background="Gray"
-            Foreground="Orange" Click="Button_Click"
-            />
+            Foreground="Orange" Click="Button_Click"/>
     </StackPanel>
 </Window>

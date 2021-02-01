@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="The Calculator" 
         Height="250" 
-        Width="450">
+        Width="450"
+        >
     <Grid
         Margin="10"
         Background="DarkGray">
@@ -20,9 +21,7 @@
                 FontFamily="Arial"
                 FontSize="20"
                 Foreground="Orange"
-                FontWeight="Bold"
-                />
-
+                FontWeight="Bold"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -34,23 +33,20 @@
                     <ColumnDefinition Width="75"/>
                     <ColumnDefinition Width="110"/>
                 </Grid.ColumnDefinitions>
-
                 <Label
                     Grid.Row="0"
                     Grid.Column="0"
                     Content="Operand 1"
                     Foreground="Orange"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Bottom"
-                    />
+                    VerticalAlignment="Bottom"/>
                 <Label
                     Grid.Row="0"
                     Grid.Column="1"
                     Content="Operand 2"
                     Foreground="Orange"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Bottom"
-                    />
+                    VerticalAlignment="Bottom"/>
                 <Button
                     x:Name="Button_Calculate"
                     Grid.Row="0"                    
@@ -62,27 +58,14 @@
                     Content="Calculate"
                     Background="LightGray"
                     Foreground="Orange" 
-                    Click="Button_Calculate_Click"
-                    />
-                <!--<Button
-                    x:Name="Button_Help"
-                    Grid.Column="3"
-                    Grid.Row="2"
-                    Height="25"
-                    Width="50"
-                    Content="Help"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Right" Click="Button_Help_Click" Margin="0,0,18,0"
-                />-->
-                
+                    Click="Button_Calculate_Click"/>
                 <Label
                     Grid.Row="0"
                     Grid.Column="3"
                     Content="Total"
                     Foreground="Orange"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Bottom"
-                    />
+                    VerticalAlignment="Bottom"/>
                 <TextBox
                     Grid.Row="1"
                     Grid.Column="0"
@@ -90,8 +73,7 @@
                     Width="75"
                     Height="25"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    />
+                    VerticalAlignment="Center"/>
                 <TextBox
                     Grid.Row="1"
                     Grid.Column="1"
@@ -99,8 +81,7 @@
                     Width="75"
                     Height="25"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    />
+                    VerticalAlignment="Center"/>
                 <Label
                     Grid.Row="1"
                     Grid.Column="3"
@@ -109,8 +90,7 @@
                     Height="25"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Background="White"
-                    />
+                    Background="White"/>
                 <ComboBox
                     x:Name="comboBox_Operation"
                     Grid.Row="1"
@@ -119,9 +99,9 @@
                     Width="40"
                     VerticalContentAlignment="Center"
                     HorizontalContentAlignment="Center"
-                    Margin="10" 
-                    SelectionChanged="ComboBox_Operation_SelectionChanged">
-                    <ComboBoxItem Content="+" IsSelected="True"/>
+                    Margin="10">
+                    <ComboBoxItem Content="" IsSelected="True"/>
+                    <ComboBoxItem Content="+"/>
                     <ComboBoxItem Content="-"/>
                     <ComboBoxItem Content="*"/>
                     <ComboBoxItem Content="/"/>
@@ -134,7 +114,6 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="300"/>
                 </Grid.ColumnDefinitions>
-
                 <Button
                     x:Name="Button_Help"
                     Grid.Column="0"
@@ -143,14 +122,22 @@
                     Width="50"
                     Content="Help"
                     VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left" 
+                    Click="Button_Help_Click" Margin="10,0,0,10"/>
+                <Button
+                    x:Name="Button_Close_MainWindow"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Height="25"
+                    Width="50"
+                    Content="Close"
+                    VerticalAlignment="Bottom"
                     HorizontalAlignment="Right" 
-                    Click="Button_Help_Click" Margin="0,0,-111,10"
-                    />
+                    Click="Button_Close_MainWindow_Click" Margin="0,0,-111,10"/>
                 <Image
                     Source="https://webcomicms.net/sites/default/files/clipart/159239/math-related-pictures-159239-1440472.gif"
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Center" 
-                    />
+                    HorizontalAlignment="Center"/>
             </Grid>
         </StackPanel>
     </Grid>

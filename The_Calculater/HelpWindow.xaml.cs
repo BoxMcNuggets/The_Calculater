@@ -23,7 +23,9 @@ namespace The_Calculater
         {
             InitializeComponent();
         }
-
+        //
+        //Close Window
+        //
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

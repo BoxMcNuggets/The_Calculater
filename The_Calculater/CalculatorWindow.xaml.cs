@@ -22,15 +22,10 @@ namespace The_Calculater
     {
         private double _operand1;
         private double _operand2;
-
-        //
-        //main window
-        //
         public CalculatorWindow()
         {
             InitializeComponent();
         }
-
         //
         //validate
         //
@@ -50,29 +45,16 @@ namespace The_Calculater
                 validInputs = false;
                 userFeedback += "Operand 2 must be a double.\n";
             }
-
             return validInputs;
         }
-
-
-
-        private void ComboBox_Shape_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Help_Click(object sender, RoutedEventArgs e)
-        {
-            HelpWindow helpScreen = new HelpWindow();
-            helpScreen.ShowDialog();
-        }
-
+        //
+        //Calculate Total
+        //
         private void Button_Calculate_Click(object sender, RoutedEventArgs e)
         {
-            double total;
             string userFeedback = "";
             string operation = comboBox_Operation.SelectionBoxItem as string;
-
+            double total;
             if (ValidInputs(out userFeedback))
             {
                 switch (operation)
@@ -99,8 +81,23 @@ namespace The_Calculater
             else
             {
                 MessageBox.Show(userFeedback);
-            }
-
+            }   
         }
+        //
+        //Display Help Window
+        //
+        private void Button_Help_Click(object sender, RoutedEventArgs e)
+        {
+            HelpWindow helpScreen = new HelpWindow();
+            helpScreen.ShowDialog();
+        }
+        //
+        //Close Application
+        //
+        private void Button_Close_MainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
